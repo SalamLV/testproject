@@ -1,0 +1,22 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+       xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id = "helloWorld" class = "com.test3.inheretance.HelloWorld3">
+        <property name = "message1" value = "Hello World!"/>
+        <property name = "message2" value = "Hello Second World!"/>
+    </bean>
+
+    <bean id = "beanTeamplate" abstract = "true">
+        <property name = "message1" value = "Hello World from template!"/>
+        <property name = "message2" value = "Hi everyone from template!"/>
+        <property name = "message3" value = "Shalom nice world!"/>
+    </bean>
+
+    <bean id ="helloIndia" class = "com.test3.inheretance.HelloIndia3" parent = "beanTeamplate">
+        <property name = "message1" value = "Hello India!"/>
+    </bean>
+</beans>
